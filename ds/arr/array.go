@@ -15,3 +15,8 @@ func SliceArr() *[]int {
 	fmt.Println(arr)
 	return &arr
 }
+
+func CreateSlice(len int, cap int) *[]int {
+	var slice = make([]int, len, cap)
+	return &slice
+}
