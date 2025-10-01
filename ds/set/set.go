@@ -18,6 +18,10 @@ func (s Set) Contains(key string) bool {
 	return ok
 }
 
+func (s Set) Len() int {
+	return len(s)
+}
+
 func (s Set) Union(other Set) Set {
 	result := make(Set)
 	for k := range s {
@@ -74,6 +78,7 @@ func main() {
 	other.Append("10")
 	fmt.Println("Other Set:")
 	fmt.Println(other)
+	fmt.Println(other.Len())
 
 	resultUnion := s.Union(other)
 	fmt.Println("Union:")
